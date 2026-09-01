@@ -1,0 +1,75 @@
+name: "@globus/ai-hub: Share Your Feedback"
+description: "Tell us how you're using AI/LLMs with Globus — what you've built, what tools you rely on, and where you're hitting gaps."
+title: "[AI/LLM Usage]: "
+labels: ["community-feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to share how you're building AI/LLM-powered tools or agents that interact with Globus.
+
+        This helps the Globus team spot common patterns and prioritize gaps in SDKs, docs, and standards for agent-based access. You don't need to fill out every field — share what's relevant to you.
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: What are you building?
+      description: A short description of your project, agent, or tool and what it does with Globus.
+      placeholder: "e.g., An agent that automates transfer setup and monitoring for a research group's data pipeline."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: interfaces-used
+    attributes:
+      label: Which agent-facing interfaces are you using?
+      description: Select all that apply.
+      options:
+        # - label: Published Globus Skills
+        - label: MCP server(s)
+        - label: Direct Globus SDK calls from an agent/LLM tool
+        - label: Custom-built tool-exposure mechanism (describe below)
+        - label: Not sure / still exploring
+
+  - type: input
+    id: interfaces-other
+    attributes:
+      label: Other interfaces or tools (if any)
+      placeholder: "e.g., custom wrapper, internal framework, third-party orchestrator"
+    validations:
+      required: false
+
+  - type: textarea
+    id: gaps
+    attributes:
+      label: What gaps or friction have you run into?
+      description: Missing capabilities, unclear or stale documentation, SDK limitations, or anything that made this harder than it should have been.
+      placeholder: "e.g., No skill exists for X yet"
+    validations:
+      required: false
+
+  # - type: textarea
+  #   id: auth-consent
+  #   attributes:
+  #     label: Authentication, authorization, or user-consent feedback
+  #     description: Anything related to how your agent authenticates, gets authorized, or requests user consent to act on Globus resources.
+  #     placeholder: "e.g., Token refresh flow was unclear for long-running agents, would like a standard pattern for scoped consent."
+  #   validations:
+  #     required: false
+
+  - type: input
+    id: links
+    attributes:
+      label: Links to relevant repos, tools, or docs
+      description: If your work is public, share a link so others can find it.
+      placeholder: "https://github.com/..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: other
+    attributes:
+      label: Anything else you'd like to share?
+      description: Open feedback, ideas, or questions.
+    validations:
+      required: false
