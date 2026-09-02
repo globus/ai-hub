@@ -17,10 +17,32 @@
       content="Exploring the intersection of research data and AI agents."
     />
     <meta property="og:type" content="website" />
-    <script type="module" crossorigin src="/ai-hub/assets/index-C3BqHpnf.js"></script>
-    <link rel="stylesheet" crossorigin href="/ai-hub/assets/index-D6ZR312T.css">
+    <script type="module" crossorigin src="/ai-hub/assets/index-CkeCOQrm.js"></script>
+    <link rel="stylesheet" crossorigin href="/ai-hub/assets/index-BLivQPH_.css">
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Decode path encoded by 404.html for GitHub Pages SPA routing.
+      // https://github.com/rafgraph/spa-github-pages
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            });
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) +
+              decoded[0] +
+              (decoded[1] ? "?" + decoded[1] : "") +
+              l.hash,
+          );
+        }
+      })(window.location);
+    </script>
   </body>
 </html>

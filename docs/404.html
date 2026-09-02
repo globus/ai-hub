@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Globus AI Hub</title>
+    <script>
+      // SPA redirect for GitHub Pages — encodes the path into a query string
+      // so index.html is served, then decodes it back client-side.
+      // https://github.com/rafgraph/spa-github-pages
+      var pathSegmentsToKeep = 1; // 1 for project pages (/repo-name/)
+      var l = window.location;
+      l.replace(
+        l.protocol +
+          "//" +
+          l.host +
+          l.pathname
+            .split("/")
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join("/") +
+          "/?/" +
+          l.pathname
+            .slice(1)
+            .split("/")
+            .slice(pathSegmentsToKeep)
+            .join("/")
+            .replace(/&/g, "~and~") +
+          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+          l.hash,
+      );
+    </script>
+  </head>
+</html>
